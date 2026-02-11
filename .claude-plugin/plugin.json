@@ -1,0 +1,9 @@
+{
+    "name": "shinerio-plugin",
+    "version": "1.0.0",
+    "description": "Shinerio Plugin",
+    "author": {
+        "name": "Shinerio"
+    },
+    "license": "MIT"
+}
