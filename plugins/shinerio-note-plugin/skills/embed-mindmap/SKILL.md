@@ -19,8 +19,10 @@ description: Generate a mind map based on a Markdown file and embed it into the 
 ## export html to png
 
 1. Open the generated HTML in chrome-devtools via `navigate_page` with `url` set to `file://{html_path}`.
-2. Use the chrome-devtools `take_screenshot` tool with `fullPage: true` and `filePath` set to `{html_path}.png` to capture the mindmap directly to a known path. This avoids relying on browser downloads.
-3. close the chrome launched for screenshot.
+2. Wait for the page to fully load using `wait_for` with a reasonable timeout (e.g., 2000ms) to ensure the markmap is rendered.
+3. Click the "Export PNG" button using the `click` tool with selector `button:has-text("Export PNG")`. This triggers the browser's export functionality, producing a cleaner PNG without unwanted text selections.
+4. Wait for the download to complete (use a short delay or wait for the file to appear in the Downloads folder).
+5. Move the downloaded PNG file from the Downloads folder to `{html_path}.png`. The downloaded file is typically named based on the HTML filename or "markmap.png".
 
 ## upload image
 
