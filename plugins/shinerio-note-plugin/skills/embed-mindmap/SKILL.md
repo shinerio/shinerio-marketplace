@@ -24,9 +24,11 @@ description: Generate a mind map based on a Markdown file and embed it into the 
 
 ## upload image
 
+Important! Note that you must run picgo_client.py by `uv run` first.
+
 Use `uv run scripts/picgo_client.py {html_path}.png` to upload image to picgo and get the image url.
 
-If uv is not available, you can also run the script with python directly:
+Only if uv is not available, you can also run the script with python directly:
 
 ```bash
 python scripts/picgo_client.py {html_path}.png`
