@@ -26,8 +26,9 @@
 在 Claude Code 对话中执行以下 slash 命令即可完成安装，**无需每次启动指定 `--plugin-dir`**：
 
 ```
-/plugin marketplace add shinerio/shinerio-plugin
-/plugin install shinerio-plugin@shinerio-marketplace
+/plugin marketplace add shinerio/shinerio-marketplace
+/plugin install shinerio-code-plugin@shinerio-marketplace
+/plugin install shinerio-note-plugin@shinerio-marketplace
 ```
 
 安装完成后，直接启动 Claude Code 即可使用：
@@ -35,28 +36,12 @@
 claude
 ```
 
-### 方式二：📜 脚本安装
-
-#### Linux / macOS
-```bash
-git clone https://github.com/shinerio/shinerio-plugin.git
-cd shinerio-plugin
-bash install.sh
-```
-
-#### Windows (PowerShell)
-```powershell
-git clone https://github.com/shinerio/shinerio-plugin.git
-cd shinerio-plugin
-.\install.ps1
-```
-
-### 方式三：🏗️ 本地插件目录调试（开发者模式）
+### 方式二：🏗️ 本地插件目录调试（开发者模式）
 
 适用于开发阶段临时调试，每次启动需要指定插件目录：
 ```bash
-git clone https://github.com/shinerio/shinerio-plugin.git
-claude --plugin-dir ./shinerio-plugin
+git clone https://github.com/shinerio/shinerio-marketplace.git
+claude --plugin-dir ./shinerio-marketplace
 ```
 
 ---
@@ -76,7 +61,7 @@ claude --plugin-dir ./shinerio-plugin
 | 组件 | 说明 |
 |------|------|
 | MCP 服务器 | `markmap-mcp-server` 和 `chrome-devtools` 随插件自动注册 |
-| 自定义命令 | `/shinerio-plugin:emb-mindmap` 命令随插件自动加载 |
+| 自定义命令 | `/shinerio-note-plugin:emb-mindmap` 命令随插件自动加载 |
 
 ---
 
@@ -128,13 +113,16 @@ claude plugin marketplace update shinerio-marketplace
 
 ### 🚫 禁用 / 启用插件
 ```
-/plugin disable shinerio-plugin@shinerio-marketplace
-/plugin enable  shinerio-plugin@shinerio-marketplace
+/plugin disable shinerio-code-plugin@shinerio-marketplace
+/plugin disable shinerio-note-plugin@shinerio-marketplace
+/plugin enable  shinerio-code-plugin@shinerio-marketplace
+/plugin enable shinerio-note-plugin@shinerio-marketplace
 ```
 
 ### 🗑️ 卸载插件
 ```
-/plugin uninstall shinerio-plugin@shinerio-marketplace
+/plugin uninstall shinerio-note-plugin@shinerio-marketplace
+/plugin uninstall shinerio-code-plugin@shinerio-marketplace
 ```
 
 ---
