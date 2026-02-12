@@ -133,7 +133,6 @@ claude plugin marketplace update shinerio-marketplace
 shinerio-plugin/
 ├── .claude-plugin/
 │   └── marketplace.json           # Marketplace 定义（支持一键安装）
-├── .mcp.json                      # 插件自带 MCP 服务器配置
 ├── plugins/
 │   ├── shinerio-code-plugin/
 │   │   ├── .claude-plugin/
@@ -141,6 +140,7 @@ shinerio-plugin/
 │   │   └── agents/
 │   │       └── test-case-executor.md  # 测试执行 Agent
 │   └── shinerio-note-plugin/
+├       |── .mcp.json                      # 插件自带 MCP 服务器配置
 │       ├── .claude-plugin/
 │       │   └── plugin.json        # 插件元数据
 │       ├── commands/
