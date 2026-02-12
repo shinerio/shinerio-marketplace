@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+# /// script
+# dependencies = [
+#   "requests",
+# ]
+# ///
 """
 PicGo Server Python Client - 通过路径上传图片
 """

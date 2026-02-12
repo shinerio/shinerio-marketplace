@@ -1,0 +1,15 @@
+{
+    "name": "shinerio-code-plugin",
+    "version": "1.0.0",
+    "description": "shinerio Plugin",
+    "author": {
+        "name": "shinerio"
+    },
+    "license": "MIT",
+    "agents": [
+        {
+            "name": "test-case-executor",
+            "description": "Use this agent when you need to execute test cases and analyze failures without making any modifications to the code"
+        }
+    ]
+}

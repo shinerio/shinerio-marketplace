@@ -1,0 +1,10 @@
+{
+  "markmap-mcp-server": {
+    "command": "npx",
+    "args": ["-y", "@jinzcdev/markmap-mcp-server"]
+  },
+  "chrome-devtools": {
+    "command": "npx",
+    "args": ["-y", "chrome-devtools-mcp@latest"]
+  }
+}

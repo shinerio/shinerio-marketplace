@@ -1,0 +1,43 @@
+{
+    "name": "shinerio-marketplace",
+    "owner": {
+        "name": "shinerio",
+        "email": "jstxshinerio@gmail.com"
+    },
+    "metadata": {
+        "description": "Shinerio's Claude Code plugin marketplace.",
+        "version": "1.0.0"
+    },
+    "plugins": [
+        {
+            "name": "shinerio-code-plugin",
+            "source": "./plugins/shinerio-code-plugin",
+            "description": "shinerio code Plugin",
+            "version": "1.0.0",
+            "author": {
+                "name": "shinerio"
+            },
+            "license": "MIT",
+            "keywords": [
+                "markmap",
+                "mindmap"
+            ],
+            "category": "productivity"
+        },
+        {
+            "name": "shinerio-note-plugin",
+            "source": "./plugins/shinerio-note-plugin",
+            "description": "shinerio note Plugin",
+            "version": "1.0.0",
+            "author": {
+                "name": "shinerio"
+            },
+            "license": "MIT",
+            "keywords": [
+                "test",
+                "automation"
+            ],
+            "category": "productivity"
+        }
+    ]
+}
