@@ -132,19 +132,25 @@ claude plugin marketplace update shinerio-marketplace
 ```
 shinerio-plugin/
 ├── .claude-plugin/
-│   ├── plugin.json          # 插件元数据
-│   └── marketplace.json     # Marketplace 定义（支持一键安装）
-├── .mcp.json                  # 插件自带 MCP 服务器配置
-├── commands/
-│   └── emb-mindmap.md         # 快捷命令（/shinerio-plugin:emb-mindmap）
-├── agents/
-│   └── test-case-executor.md  # 测试执行 Agent
-├── skills/
-│   └── markmap/
-│       ├── SKILL.md           # Markmap 技能定义
-│       └── scripts/           # 辅助脚本（图片上传等）
-├── install.sh                 # Linux/macOS 安装脚本
-├── install.ps1                # Windows 安装脚本
+│   └── marketplace.json           # Marketplace 定义（支持一键安装）
+├── .mcp.json                      # 插件自带 MCP 服务器配置
+├── plugins/
+│   ├── shinerio-code-plugin/
+│   │   ├── .claude-plugin/
+│   │   │   └── plugin.json        # 插件元数据
+│   │   └── agents/
+│   │       └── test-case-executor.md  # 测试执行 Agent
+│   └── shinerio-note-plugin/
+│       ├── .claude-plugin/
+│       │   └── plugin.json        # 插件元数据
+│       ├── commands/
+│       │   └── emb-mindmap.md     # 快捷命令（/shinerio-note-plugin:emb-mindmap）
+│       └── skills/
+│           └── embed-mindmap/
+│               ├── SKILL.md       # Markmap 技能定义
+│               ├── README.md      # 技能说明文档
+│               └── scripts/
+│                   └── picgo_client.py  # 图片上传脚本
 └── README.md
 ```
 
