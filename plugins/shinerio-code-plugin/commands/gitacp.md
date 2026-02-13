@@ -1,5 +1,6 @@
 ---
 description: 分析对话上下文生成提交摘要，备份changelog，执行git add、commit、push
+allowed-tools: Bash(git *)
 ---
 
 # GitACP - Git Add Commit Push 自动化命令
