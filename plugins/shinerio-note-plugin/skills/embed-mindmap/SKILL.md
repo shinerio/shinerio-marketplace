@@ -1,6 +1,7 @@
 ---
 name: embed-mindmap
 description: Generate a mind map based on a Markdown file and embed it into the Markdown document
+allowed-tools: Bash(mv *), Bash(uv run *), Bash(sleep *)
 ---
 
 # steps
@@ -23,6 +24,7 @@ description: Generate a mind map based on a Markdown file and embed it into the 
 3. Click the "Export PNG" button using the `click` tool with selector `button:has-text("Export PNG")`. This triggers the browser's export functionality, producing a cleaner PNG without unwanted text selections.
 4. Wait for the download to complete (use a short delay or wait for the file to appear in the Downloads folder).
 5. Move the downloaded PNG file from the Downloads folder to `{html_path}.png`. The downloaded file is typically named based on the HTML filename or "markmap.png".
+6. Rename the png file with pattern `{markdown_file_name}_YYYY_MM_DD_HHMMSS.png`.
 
 ## upload image
 
@@ -38,7 +40,7 @@ python scripts/picgo_client.py {html_path}.png`
 
 ## embed mindmap
 
-Add a mind map section if not exist at the end of the Markdown file and embed the image url. `![mindmap](image_url)`
+Add a mind map section titled "# 🧠 Overview" at the beginning of the Markdown file and embed the image url. `![mindmap](image_url)`
 
 ## cleanup temporary files
 
