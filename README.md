@@ -2,6 +2,10 @@
 
 一个为 Claude Code 设计的功能增强插件，致力于提升开发效率和文档可视化能力。
 
+## 🧠 Overview
+
+![mindmap](https://shinerio.oss-cn-beijing.aliyuncs.com/obsidian/markmap-1770985694173.html.png)
+
 ## 🚀 主要功能
 
 ### 1. 🧠 Markmap 思维导图集成
