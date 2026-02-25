@@ -19,8 +19,8 @@
             },
             "license": "MIT",
             "keywords": [
-                "markmap",
-                "mindmap"
+               "test",
+               "automation"
             ],
             "category": "productivity"
         },
@@ -28,14 +28,14 @@
             "name": "shinerio-note-plugin",
             "source": "./plugins/shinerio-note-plugin",
             "description": "shinerio note Plugin",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "author": {
                 "name": "shinerio"
             },
             "license": "MIT",
             "keywords": [
-                "test",
-                "automation"
+               "mindmap",
+               "drawio"
             ],
             "category": "productivity"
         }
