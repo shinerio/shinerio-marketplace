@@ -21,6 +21,13 @@
 - **深度分析**：针对每一个失败的测试用例，从断言失败、异常信息到环境因素进行全方位分析。
 - **修复建议**：提供切实可行的修复建议（不直接修改代码，保证安全）。
 
+### 4. 🗺️ Draw.io 图表分析 (Drawio Diagram Analyst)
+一个专门的 Agent 角色，用于解析 Draw.io 文件并将其转换为结构化的文字描述。
+- **智能解析**：读取 `.drawio` / `.xml` 文件的原始 XML 结构，识别所有形状、连接器、标签、分组和泳道。
+- **架构提取**：识别系统架构、工作流序列、数据关系并生成可读的文字模型。
+- **多图表类型**：支持架构图、流程图、时序图、ER 图、思维导图等多种图表类型。
+- **图表操作**：集成 `@next-ai-drawio/mcp-server`，可直接启动会话、获取和分析图表内容。
+
 ### 3. 🔁 Git 一键提交推送 (GitACP)
 通过 `/gitacp` 命令，结合对话上下文与 `git diff` 自动生成提交摘要，完成从暂存到推送的全流程。
 - **智能摘要**：综合分析 git diff 实际变更和对话上下文，自动生成提交标题与摘要。
@@ -88,6 +95,11 @@ claude --plugin-dir ./shinerio-marketplace
 在需要调试测试用例时，可以显式调用 `test-case-executor`：
 - "@test-case-executor 运行并分析当前的单元测试。"
 - "帮我分析一下为什么这个测试用例失败了。"
+
+### 🗺️ 分析 Draw.io 图表
+需要理解 Draw.io 文件内容时，调用 `drawio-diagram-analyst`：
+- "@drawio-diagram-analyst 帮我分析这个架构图。"
+- "I have this architecture.drawio file — can you help me understand what's going on in it?"
 
 ### 🔁 一键提交推送
 在完成功能开发后，执行 slash 命令自动完成提交：
@@ -159,9 +171,11 @@ shinerio-plugin/
 │   │   └── commands/
 │   │       └── gitacp.md          # 快捷命令（/shinerio-code-plugin:gitacp）
 │   └── shinerio-note-plugin/
-├       |── .mcp.json                      # 插件自带 MCP 服务器配置
+│       ├── .mcp.json                      # 插件自带 MCP 服务器配置
 │       ├── .claude-plugin/
 │       │   └── plugin.json        # 插件元数据
+│       ├── agents/
+│       │   └── drawio-diagram-analyst.md  # Draw.io 图表分析 Agent
 │       └── skills/
 │           └── embed-mindmap/
 │               ├── SKILL.md       # Markmap 技能定义
