@@ -28,7 +28,7 @@
             "name": "shinerio-note-plugin",
             "source": "./plugins/shinerio-note-plugin",
             "description": "shinerio note Plugin",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "author": {
                 "name": "shinerio"
             },
