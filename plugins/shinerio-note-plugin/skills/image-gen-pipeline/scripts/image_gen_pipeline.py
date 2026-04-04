@@ -82,14 +82,18 @@ class APIMartImagePipeline:
         if os.getenv("ALIYUN_OSS_PUBLIC_BASE_URL"):
             public_base = os.getenv("ALIYUN_OSS_PUBLIC_BASE_URL").rstrip("/")
         else:
-            # When user doesn't provide public base, construct it from endpoint.
-            # If endpoint already includes bucket, just use it directly.
-            if bucket in endpoint:
-                public_base = endpoint
+            # For Aliyun OSS public access, prefer third-level bucket domain:
+            # https://<bucket>.oss-<region>.aliyuncs.com
+            # If the endpoint already includes the bucket hostname, use it directly.
+            endpoint_clean = endpoint.rstrip("/")
+            if bucket in endpoint_clean:
+                public_base = endpoint_clean
             else:
-                public_base = f"{endpoint.rstrip('/')}/{bucket}"
+                parsed = requests.utils.urlparse(endpoint_clean)
+                scheme = parsed.scheme or "https"
+                host = parsed.netloc or parsed.path
+                public_base = f"{scheme}://{bucket}.{host}"
             public_base = public_base.rstrip("/")
-
 
         settings = Settings(
             apimart_api_key=req("APIMART_API_KEY"),

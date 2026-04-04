@@ -3,11 +3,15 @@ date: 2026-04-04 13:11
 created: 2026-04-04 13:11
 updated: 2026-04-04 13:11
 categories:
-- category_name
+- category-name
+- AI-GENERATED
 tags:
+- AI-GENERATED
 - tag1
 - tag2
 ---
+
+> 本文内容由shinerio's AI助手生成🦞，内容仅供参考，不保证完全正确性。
 
 # 报告标题
 
